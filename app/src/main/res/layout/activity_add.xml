@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_arrow_white"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/category_text"/>
+            <TextView
+                android:id="@+id/category_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Категории"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/back"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <LinearLayout
+        android:id="@+id/text_and_icons"
+        style="@style/linear_layout"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:layout_constraintBottom_toTopOf="@id/calculator">
+
+        <LinearLayout
+            android:id="@+id/total_amount"
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:hint="0"/>
+
+            <ImageView
+                android:id="@+id/qr_code"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/qr_code"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/wtf"
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/incomeOrLoss"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:hint="Введите сумму"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/vector1"
+            style="@style/vector"
+            android:src="@drawable/vector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/total_amount" />
+
+        <LinearLayout
+            android:id="@+id/inf"
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/massageTextEdit"
+                android:layout_width="289dp"
+                android:layout_height="47dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:hint="Комментарий"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/vector2"
+                style="@style/vector"
+                android:src="@drawable/vector2" />
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginHorizontal="10dp"
+                android:src="@drawable/ic_check" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/calculator"
+        style="@style/linear_layout"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_and_icons">
+        <LinearLayout
+            style="@style/linear_layout"
+            android:orientation="horizontal"
+            android:background="@color/darkGray">
+
+            <TextView
+                android:id="@+id/btn_multiply"
+                style="@style/n_buttons"
+                android:text="*" />
+            <TextView
+                android:id="@+id/btn_divide"
+                style="@style/n_buttons"
+                android:text="/" />
+            <TextView
+                android:id="@+id/btn_plus"
+                style="@style/n_buttons"
+                android:text="+" />
+            <TextView
+                android:id="@+id/btn_minus"
+                style="@style/n_buttons"
+                android:text="-" />
+            <TextView
+                android:id="@+id/btn_equals"
+                style="@style/n_buttons"
+                android:text="=" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btn_1"
+                style="@style/n_buttons"
+                android:text="1" />
+            <TextView
+                android:id="@+id/btn_2"
+                style="@style/n_buttons"
+                android:text="2" />
+            <TextView
+                android:id="@+id/btn_3"
+                style="@style/n_buttons"
+                android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btn_4"
+                style="@style/n_buttons"
+                android:text="4"/>
+            <TextView
+                android:id="@+id/btn_5"
+                style="@style/n_buttons"
+                android:text="5" />
+            <TextView
+                android:id="@+id/btn_6"
+                style="@style/n_buttons"
+                android:text="6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btn_7"
+                style="@style/n_buttons"
+                android:text="7"/>
+            <TextView
+                android:id="@+id/btn_8"
+                style="@style/n_buttons"
+                android:text="8" />
+            <TextView
+                android:id="@+id/btn_9"
+                style="@style/n_buttons"
+                android:text="9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linear_layout"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/btn_dott"
+                style="@style/n_buttons"
+                android:text="." />
+            <TextView
+                android:id="@+id/btn_0"
+                style="@style/n_buttons"
+                android:text="0" />
+            <ImageView
+                android:id="@+id/btn_delete"
+                style="@style/n_buttons"
+                android:src="@drawable/ic_del"
+                android:padding="15dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

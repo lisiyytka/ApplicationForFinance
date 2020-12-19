@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="green">#27AE60</color>
+    <color name="transparentGreen">#1427AE60</color>
+    <color name="gray">#D2D2D2</color>
+    <color name="lightGray">#F0F0F0</color>
+    <color name="whitish">#FFFBFB</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkGray">#757575</color>
+    <color name="blue">#3B64A3</color>
+    <color name="orange">#C48C4F</color>
+    <color name="paleGreen">#489073</color>
+    <color name="red">#AD3030</color>
+    <color name="grassGreen">#639E3F</color>
+    <color name="pink">#C827CB</color>
+    <color name="paleNotSoPink">#C06161</color>
+    <color name="blueAndPurple">#452DA5</color>
+    <color name="notSoPink">#D43E62</color>
+    <color name="sky">#0090BD</color>
+    <color name="brick">#A03A00</color>
+    <color name="hotPink">#AB0085</color>
+    <color name="aquamarine">#00AD98</color>
+    <color name="purple">#6600A5</color>
+    <color name="yellow">#C8B931</color>
+    <color name="darkGreen">#008F28</color>
+    <color name="dirtyGreen">#718400</color>
+    <color name="lightBlue">#00A0A0</color>
+    <color name="salmon">#E08A8A</color>
+    <color name="simpleGray">#B4B4B4</color>
+    <color name="transparentBlack">#50000000</color>
+</resources>
