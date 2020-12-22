@@ -33,7 +33,7 @@
         <TextView
             style="@style/register_input"/>
         <TextView
-            android:id="@+id/passsuka"
+            android:id="@+id/passsword"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             style="@style/register_input"

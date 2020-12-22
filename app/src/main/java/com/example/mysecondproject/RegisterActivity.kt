@@ -4,9 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.activity_add.btn_0
 import kotlinx.android.synthetic.main.activity_add.btn_1
 import kotlinx.android.synthetic.main.activity_add.btn_2
@@ -18,8 +16,6 @@ import kotlinx.android.synthetic.main.activity_add.btn_7
 import kotlinx.android.synthetic.main.activity_add.btn_8
 import kotlinx.android.synthetic.main.activity_add.btn_9
 import kotlinx.android.synthetic.main.activity_add.btn_delete
-import kotlinx.android.synthetic.main.fragment_register_code.*
-import kotlinx.android.synthetic.main.fragment_register_code.password
 import kotlinx.android.synthetic.main.register_step_one.*
 
 class RegisterActivity : AppCompatActivity() {
@@ -39,16 +35,16 @@ class RegisterActivity : AppCompatActivity() {
         btn_8.setOnClickListener { setTextFields("8") }
         btn_9.setOnClickListener { setTextFields("9") }
         btn_delete.setOnClickListener {
-            val str=passsuka.text.toString()
+            val str=passsword.text.toString()
             if(str.isNotEmpty()){
-                passsuka.text=str.substring(0,str.length-1)
+                passsword.text=str.substring(0,str.length-1)
             }
 //            val finalPass =
         }
     }
 
     fun setTextFields(str: String) {
-        passsuka.append(str)
+        passsword.append(str)
         checkPass()
     }
 
@@ -56,8 +52,8 @@ class RegisterActivity : AppCompatActivity() {
     fun checkPass() {
 
         next.setOnClickListener {
-            if (passsuka.text.length == 4){
-                val finalPassword  = passsuka.text
+            if (passsword.text.length == 4){
+                val finalPassword  = passsword.text
                 var field = Field(
                     " ",
                     0.0,
@@ -72,7 +68,7 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity(Intent(this,ActivityRegister2::class.java))
             }
             else {
-                passsuka.text = ""
+                passsword.text = ""
                 Toast.makeText(this, "Неверный пароль",Toast.LENGTH_LONG).show()
             }
         }

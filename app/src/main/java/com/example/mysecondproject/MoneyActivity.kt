@@ -23,13 +23,13 @@ class MoneyActivity :AppCompatActivity() {
         val db = DataBaseHandler(this)
         val data = db.readData()
 //        val pie = findViewById<PieChart>(R.id.pieChart)
-//        val pieDataSet = PieDataSet(DataDiagramma.create().toMutableList(), "Zalupa")
+//        val pieDataSet = PieDataSet(DataDiagramma.create().toMutableList(), "111")
 //        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS.toMutableList())
 //        pieDataSet.setValueLineColor(R.color.colorPrimary)
 //        pieDataSet.setValueTextSize(14f)
 //        val pieData = PieData(pieDataSet)
 //        pie.setData(pieData)
-//        pie.setCenterText("Kozel")
+//        pie.setCenterText("K2222")
 
 //        val listView: ListView = findViewById(R.id.listView)
 //
@@ -47,8 +47,6 @@ class MoneyActivity :AppCompatActivity() {
         for (i in 2..data.size-1){
             arrayList.add(0,createNewField(i))
         }
-
-        val a = findViewById<TextView>(R.id.sum)
 
         val adapter = SimpleAdapter(
             this,
